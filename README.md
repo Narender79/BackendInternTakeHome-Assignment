@@ -95,8 +95,6 @@ Description: Delete an incident.
 Example using curl:
 curl -X DELETE http://127.0.0.1:5000/incidents/1
 📌 Design Decisions & Challenges
-Kept the project lightweight using psycopg2 directly for SQL handling instead of using ORMs like SQLAlchemy, to have full control over queries.
+Kept the project lightweight using psycopg2 directly for SQL handling to have full control over queries.
 
 Implemented basic validation on API level, such as checking required fields and verifying that severity is one of "Low", "Medium", "High".
-
-Error handling for missing records (404 Not Found) and invalid inputs (400 Bad Request) is implemented to ensure API robustness.
